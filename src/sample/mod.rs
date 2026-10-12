@@ -171,7 +171,7 @@ pub use assets::loader::{AudioLoaderConfig, SampleLoader, SampleLoaderError};
 /// Once a sample has been queued in a pool, the [`Sampler`][crate::pool::Sampler] component
 /// will be inserted, which provides information about the
 /// playhead position and playback status.
-#[derive(Debug, Component, Clone)]
+#[derive(Debug, Component, Clone, FromTemplate)]
 #[component(immutable)]
 #[require(PlaybackSettings, SamplePriority, SampleQueueLifetime, QueuedSample)]
 #[cfg_attr(feature = "entity_names", require(Name::new("SamplePlayer")))]
